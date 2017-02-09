@@ -1,0 +1,106 @@
+info:
+    theme_name: 'Baboon Configuration Theme'
+    update_zip_uri: 'https://github.com/behram/BaboonConfigurationTheme/archive/master.zip'
+    update_git_uri: 'git@github.com:behram/BaboonConfigurationTheme.git'
+
+render_files:
+    - index.html
+    - css/style.css
+    - js/site.js
+
+assets:
+    text_text:
+        label: 'Long text'
+        type: text
+        max: 400
+        min: 100
+        default: |
+            The English Benedictine Reform in the late tenth century was the most important religious and intellectual movement in the later Anglo-Saxon period. The reformers sought to replace married secular clergy in monasteries with celibate contemplative monks who followed the Rule of Saint Benedict. The court of Æthelstan (924–39), the first king of the whole of England, began a cosmopolitan trend; future reformers such as Æthelwold of Winchester, Oswald of Worcester, and Dunstan, Archbishop of Canterbury, learned from Continental exponents of Benedictine monasticism. The reformers had close relations with the crown, furthering its interests and depending on its support, especially under King Edgar (959–75). Influential artistic workshops established by Æthelwold reached a high standard of craftsmanship in manuscript illustration, sculpture and gold and silver, and his monasteries produced scholarship and competent prose and poetry in the elaborate hermeneutic style of Latin. His Winchester school helped create the standard vernacular
+    text_string:
+        label: 'Short text'
+        type: string
+        max: 50
+        min: 10
+        default: Hello i am default
+    text_markdown:
+        label: 'Markdown'
+        type: markdown
+        max: 1000
+        min: 10
+        default: '##hello markdown'
+    text_richtext:
+        label: 'Richtext'
+        type: richtext
+        default: '<h1>Rich text hello</h1>'
+    image_logo:
+        label: 'Image Logo'
+        type: image
+        width: 100
+        height: 200
+        default: 'http://lorempixel.com/100/200/'
+    file_all_type:
+        label: 'File All Type'
+        type: file
+        mime_types: "*"
+        default: 'http://www.snee.com/xml/xslt/sample.doc'
+    file_doc_type:
+        label: 'Doc File'
+        type: file
+        mime_types:
+            - application/atom+xml
+            - application/pdf
+        default: 'http://www.pdf995.com/samples/pdf.pdf'
+    birth_day:
+        label: 'Birth Day'
+        type: datetime
+        format: 'd/m/Y'
+        default: '27/09/1994'
+    select_name:
+        label: 'Select a Name'
+        type: choices
+        default: Behram
+        choices:
+          - Kalem
+          - Selam
+          - Kazim
+          - Behram
+    email:
+        label: 'Email'
+        type: email
+        default: 'behramcelen@gmail.com'
+    font_color:
+        label: 'Font Color'
+        type: color
+        default: red
+    posts:
+        label: 'Posts'
+        type: tree
+        multiple: true
+        assets:
+            title:
+                label: 'Post Title'
+                type: string
+                max: 50
+                min: 10
+                default: My Great Post
+            thumb:
+                label: 'Post Thumb'
+                type: image
+                width: 100
+                height: 250
+                default: 'http://lorempixel.com/100/250/'
+            content:
+                label: 'Post Content'
+                type: richtext
+                default: '<h1>Rich text post content</h1>'
+            authors:
+                label: 'Authors'
+                type: tree
+                multiple: true
+                assets:
+                    full_name:
+                        label: 'Author Full Name'
+                        type: string
+                        max: 50
+                        min: 10
+                        default: Behram ÇELEN
